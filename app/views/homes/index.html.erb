@@ -1,0 +1,58 @@
+<%= render partial: "shared/navbar" %>
+
+<div class="container">
+	<div class="row justify-content-md-around" style="padding-top: 10px;">
+		<div class="col col-lg-3 custom-class ">
+
+
+			<div class="container">
+				<h1 class="row justify-content-md-center custom-content-heading-class"> 
+					Mosque
+				</h1>
+				<div class="row justify-content-md-around" style="padding-bottom: 15px;">
+					<div class="col col-lg-3">
+						<div class="overflow-class">
+							<% @mosques.each do |m| %>
+								<%= render partial: "mosque_partial", locals: { mosque: m } %>
+								<br>
+							<% end %>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-md-around"> 
+					<div class="col col-lg-3">
+						<h1 class="row justify-content-md-center custom-content-heading-class"> 
+							madarsa
+						</h1>
+						<div class="overflow-class">
+							<% @mosques.where(category: "madarsa").each do |m| %>
+								<%= render partial: "mosque_partial", locals: { mosque: m } %>
+								<br>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-lg-2 custom-class">
+			<div class="container">
+				<h1 class="row justify-content-md-center custom-content-heading-class"> 
+					User Section
+				</h1>
+				<div class="row justify-content-md-around">
+					
+				</div>
+			</div>
+		</div>
+		<div class="col col-lg-2 custom-class">
+			<div class="container">
+				<h1 class="row justify-content-md-center custom-content-heading-class"> 
+					Other
+				</h1>
+				<div class="row justify-content-md-around">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

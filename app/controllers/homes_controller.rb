@@ -3,8 +3,9 @@ class HomesController < ApplicationController
 
   def index
     filter = params[:filter]
+    request.remote_ip
 
-    mosques = 
+    @mosques = 
     if filter.present?
       Home.where(category: filter)
     else
@@ -12,11 +13,11 @@ class HomesController < ApplicationController
     end
 
 
-    if mosques.present?
-      render json: {data: mosques}, status: :ok
-    else
-      render json: {message:'not found'}, status: :false
-    end
+    # if @mosques.present?
+    #   render json: {data: @mosques}, status: :ok
+    # else
+    #   render json: {message:'not found'}, status: :false
+    # end
 
   end
 

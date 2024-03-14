@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+
+.custom-class {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  text-align: center;
+  color: blue; /* Example color */
+  width: 20%; /* Example width */
+  height: 100%; /* Example height */
+  padding-right: 30%;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+}
+.custom-title-class {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  text-align: center;
+  color: blue; /* Example color */
+  width: 20%; /* Example width */
+  border: 1px solid black;
+  padding-right: 30%;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.custom-heading-class {
+  color: seagreen;
+  padding-top: 20px;
+}
+
+.con-class {
+   border: 2px solid lightblue; /* Example border */
+  padding: 10px; /* Example padding */
+  padding-top: 0px; /* Example padding */
+
+}
+
+.table-text-align-right {
+  text-align: right;
+}
+
+.table-text-align-left {
+  text-align: left;
+}
+
+.overflow-class {
+  width: 300px; /* Example width */
+  height: 300px; /* Example height */
+  overflow: auto; /* Add overflow property */
+}
+
+.box-class {
+  width: 300px; /* Example width */
+  height: 200px; /* Example height */
+  overflow: auto; /* Add overflow property */
+}
+
+.custom-content-class {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  background-color: lightblue;
+  height: 30px;
+  text-transform: capitalize; /* Specify the height of the container */
+}
+.custom-content-heading-class {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center;
+/*  align-items: center;  Center horizontally */
+  text-align: center;
+  background-color: lightblue;
+  height: 40px;
+  width:350px;
+  text-transform: capitalize; /* Specify the height of the container */
+}

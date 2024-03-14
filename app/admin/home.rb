@@ -31,6 +31,8 @@ ActiveAdmin.register Home do
     f.inputs 'Mosque Details' do
       f.input :category, input_html: { multiple: false }, collection: Category.all.map { |c| [c.name] }, prompt: 'Select Category'
       f.input :address
+      f.input :latitude
+      f.input :longitude
       f.input :full_name
       f.input :manager
       f.input :imam
