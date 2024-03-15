@@ -1,0 +1,81 @@
+<div class="con-class">
+    <h4 class="row justify-content-md-center custom-content-class"> 
+        <span class="text-decoration-none text-primary fs-6 text-center navbar-brand"> <%= @home.full_name %> </span>
+    </h4>
+    <p class="row justify-content-md-center" style="text-transform: capitalize;"> 
+        <table style="padding-top: 0;">
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> Address </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.address %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> Contact No </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.contact_no %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> Mutawalli </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.manager %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> latitude </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.latitude %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> longitude </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.longitude %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> category </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.category %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> email </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.email %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> imam </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.imam %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> whatsapp </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <%= @home.whatsapp %>
+                </td>
+            </tr>
+        </table>
+    </p>
+</div>

@@ -64,6 +64,11 @@
   overflow: auto; /* Add overflow property */
 }
 
+.show-class {
+  width: 300px; /* Example width */
+  overflow: auto; /* Add overflow property */
+}
+
 .box-class {
   width: 300px; /* Example width */
   height: 200px; /* Example height */

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row justify-content-md-around" style="padding-top: 10px;">
+    <div class="col">
+      <% if @results.any? %>
+        <h1>Search Results</h1>
+        <ul>
+          <% @results.each do |result| %>
+            <li><%= link_to result.full_name, home_path(result), class: "text-decoration-none text-primary fw-bold fs-4" %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No results found.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+

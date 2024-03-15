@@ -3,27 +3,28 @@ class HomesController < ApplicationController
 
   def index
     filter = params[:filter]
-    request.remote_ip
-
-    @mosques = 
-    if filter.present?
-      Home.where(category: filter)
-    else
-      Home.all
-    end
 
 
+    @mosques = if params[:search].present?
+                 Home.where('title LIKE ?', "%#{params[:search]}%")
+               elsif filter.present?
+                 Home.where(category: filter)
+               else
+                 Home.all
+               end
+    @mosque_index = Home.where(category: "mosque")
+    @madarsa_index = Home.where(category: "madarsa")
     # if @mosques.present?
-    #   render json: {data: @mosques}, status: :ok
+    #   render json: { data: @mosques }, status: :ok
     # else
-    #   render json: {message:'not found'}, status: :false
+    #   render json: { message: 'not found' }, status: :not_found
     # end
-
   end
 
+
   def show
-    home = Home.find(params[:id])
-    render json: {data: home},  status: :created
+    @home = Home.find(params[:id])
+    # render json: {data: @home},  status: :created
   end
   
   def new

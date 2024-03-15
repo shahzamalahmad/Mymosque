@@ -1,10 +1,6 @@
-<%= render partial: "shared/navbar" %>
-
 <div class="container">
 	<div class="row justify-content-md-around" style="padding-top: 10px;">
 		<div class="col col-lg-3 custom-class ">
-
-
 			<div class="container">
 				<h1 class="row justify-content-md-center custom-content-heading-class"> 
 					Mosque
@@ -12,8 +8,8 @@
 				<div class="row justify-content-md-around" style="padding-bottom: 15px;">
 					<div class="col col-lg-3">
 						<div class="overflow-class">
-							<% @mosques.each do |m| %>
-								<%= render partial: "mosque_partial", locals: { mosque: m } %>
+							<% @mosque_index.each do |m| %>
+									<%= render partial: "mosque_partial", locals: { mosque: m } %>
 								<br>
 							<% end %>
 						</div>
@@ -25,7 +21,7 @@
 							madarsa
 						</h1>
 						<div class="overflow-class">
-							<% @mosques.where(category: "madarsa").each do |m| %>
+							<% @madarsa_index.each do |m| %>
 								<%= render partial: "mosque_partial", locals: { mosque: m } %>
 								<br>
 							<% end %>

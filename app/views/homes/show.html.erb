@@ -1,2 +1,19 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="container">
+	<div class="row justify-content-md-around" style="padding-top: 10px;">
+		<div class="col col-lg-6 custom-class ">
+			<div class="container">
+				<h1 class="row justify-content-md-center custom-content-heading-class"> 
+					<%= @home.category %>
+				</h1>
+				<div class="row justify-content-md-around" style="padding-bottom: 15px;">
+					<div class="col col-lg-6">
+						<div class="show-class">
+							<%= render partial: "show_mosque_partial", locals: { home: @home } %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+s
