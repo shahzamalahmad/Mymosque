@@ -349,4 +349,11 @@ ActiveAdmin.setup do |config|
   # You can switch to using Webpacker here.
   #
   # config.use_webpacker = true
+
+  # Rails.application.config.after_initialize do
+  #   javascripts = Array.wrap("//maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS_API_KEY']}&libraries=places")
+  #   javascripts += ActiveAdmin.application.javascripts.to_a
+  #   ActiveAdmin.application.javascripts.clear
+  #   ActiveAdmin.application.javascripts.push(*javascripts)
+  # end
 end

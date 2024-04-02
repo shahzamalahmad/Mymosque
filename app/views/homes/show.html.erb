@@ -10,6 +10,10 @@
 						<div class="show-class">
 							<%= render partial: "show_mosque_partial", locals: { home: @home } %>
 						</div>
+						<div id="map" style="height: 400px;">
+							<%= javascript_include_tag 'map' %>
+						</div>
+
 					</div>
 				</div>
 			</div>

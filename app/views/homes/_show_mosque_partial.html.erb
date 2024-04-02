@@ -9,7 +9,7 @@
                     <strong> Address </strong>
                 </th>
                 <td class="table-text-align-left">
-                    <%= @home.address %>
+                    <%= @home.address.capitalize %>
                 </td>
             </tr>
             <tr>
@@ -25,12 +25,12 @@
                     <strong> Mutawalli </strong>
                 </th>
                 <td class="table-text-align-left">
-                    <%= @home.manager %>
+                    <%= @home.manager.capitalize %>
                 </td>
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> latitude </strong>
+                    <strong> Latitude </strong>
                 </th>
                 <td class="table-text-align-left">
                     <%= @home.latitude %>
@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> longitude </strong>
+                    <strong> Longitude </strong>
                 </th>
                 <td class="table-text-align-left">
                     <%= @home.longitude %>
@@ -46,15 +46,15 @@
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> category </strong>
+                    <strong> Category </strong>
                 </th>
                 <td class="table-text-align-left">
-                    <%= @home.category %>
+                    <%= @home.category.capitalize %>
                 </td>
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> email </strong>
+                    <strong> Email </strong>
                 </th>
                 <td class="table-text-align-left">
                     <%= @home.email %>
@@ -62,18 +62,28 @@
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> imam </strong>
+                    <strong> Imam </strong>
                 </th>
                 <td class="table-text-align-left">
-                    <%= @home.imam %>
+                    <%= @home.imam.capitalize %>
                 </td>
             </tr>
             <tr>
                 <th class="table-text-align-right">
-                    <strong> whatsapp </strong>
+                    <strong> Whatsapp </strong>
                 </th>
                 <td class="table-text-align-left">
                     <%= @home.whatsapp %>
+                </td>
+            </tr>
+            <tr>
+                <th class="table-text-align-right">
+                    <strong> Address </strong>
+                </th>
+                <td class="table-text-align-left">
+                    <% if @location&.address.present? %>
+                        <%= @location&.address + " " + @location&.postal_code.to_s %>
+                    <% end %>
                 </td>
             </tr>
         </table>

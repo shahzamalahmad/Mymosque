@@ -4,26 +4,33 @@ class HomesController < ApplicationController
   def index
     filter = params[:filter]
 
-
+    mosques = Home.where(is_approved: true)
     @mosques = if params[:search].present?
-                 Home.where('title LIKE ?', "%#{params[:search]}%")
+                 mosques.where('title LIKE ?', "%#{params[:search]}%")
                elsif filter.present?
-                 Home.where(category: filter)
+                 mosques.where(category: filter)
                else
-                 Home.all
+                 mosques.all
                end
-    @mosque_index = Home.where(category: "mosque")
-    @madarsa_index = Home.where(category: "madarsa")
+    @mosque_index = mosques.where(category: "mosque")
+    @madarsa_index = mosques.where(category: "madarsa")
     # if @mosques.present?
     #   render json: { data: @mosques }, status: :ok
     # else
     #   render json: { message: 'not found' }, status: :not_found
     # end
+    respond_to do |format|
+      format.html # Render HTML for normal requests
+      format.json { render json: { data: @mosques }, status: :ok } # Render JSON for JSON requests
+    end
   end
 
 
   def show
+    # @location = Location.find(params[:id])
     @home = Home.find(params[:id])
+    @location = Location.find_or_create_by(latitude: @home.latitude, longitude: @home.longitude)
+    # byebug
     # render json: {data: @home},  status: :created
   end
   

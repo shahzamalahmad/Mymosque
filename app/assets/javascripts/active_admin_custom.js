@@ -8,3 +8,8 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+// custom.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  $('.map-input').geocomplete();
+});
