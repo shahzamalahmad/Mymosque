@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .custom-class {
   display: flex; /* Use flexbox */
@@ -64,6 +71,12 @@
   overflow: auto; /* Add overflow property */
 }
 
+.overflow-class {
+  width: 300px; /* Example width */
+  height: 300px; /* Example height */
+  overflow: auto; /* Add overflow property */
+}
+
 .show-class {
   width: 300px; /* Example width */
   overflow: auto; /* Add overflow property */
@@ -83,8 +96,22 @@
   text-align: center;
   background-color: lightblue;
   height: 30px;
+/*  width: 120%;*/
   text-transform: capitalize; /* Specify the height of the container */
 }
+
+.overflow-hidden-class {
+  width: 300px; /* Example width */
+  height: 300px; /* Example height */
+  border-bottom: 2px solid lightblue;
+  overflow: hidden; /* Add overflow property */
+}
+
+.notification {
+  margin-bottom: 10px; /* Margin bottom */
+  animation: slide-up 5s ease-out forwards infinite; /* Apply animation */
+}
+
 .custom-content-heading-class {
   display: flex; /* Use flexbox */
   flex-direction: column; /* Arrange children vertically */

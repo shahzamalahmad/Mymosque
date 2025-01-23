@@ -1,6 +1,6 @@
 ActiveAdmin.register Home do
-  permit_params :category, :address, :full_name, :manager, :imam, :contact_no, :email, :whatsapp
 
+  permit_params :address, :latitude, :longitude, :body, :category, :contact_no, :created_at, :email, :first_name, :full_name, :id, :id_value, :imam, :last_name, :manager, :title, :updated_at, :whatsapp
 
   index do
     selectable_column
@@ -23,6 +23,7 @@ ActiveAdmin.register Home do
     column :contact_no
     column :email
     column :whatsapp
+    column :is_approved
     actions
   end
 
@@ -39,6 +40,7 @@ ActiveAdmin.register Home do
       f.input :contact_no
       f.input :email
       f.input :whatsapp
+      f.input :is_approved
     end
     f.actions
   end
@@ -60,6 +62,7 @@ ActiveAdmin.register Home do
       row :imam do |home|
         home.imam.humanize
       end
+      row :is_approved
     end
   end
 end
