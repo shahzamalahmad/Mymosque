@@ -1,6 +1,6 @@
 ActiveAdmin.register Home do
 
-  permit_params :address, :latitude, :longitude, :body, :category, :contact_no, :created_at, :email, :first_name, :full_name, :id, :id_value, :imam, :last_name, :manager, :title, :updated_at, :whatsapp
+  permit_params :address, :latitude, :longitude, :body, :category, :contact_no, :created_at, :email, :first_name, :full_name, :id, :id_value, :imam, :last_name, :manager, :title, :updated_at, :whatsapp, :is_approved
 
   index do
     selectable_column
