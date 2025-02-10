@@ -34,8 +34,9 @@ class HomesController < ApplicationController
   end
 
   def create
-    mosque = Home.new(home_params )
-    if mosque.save
+    @mosque = Home.new(home_params )
+    if @mosque.save
+      # Notification.create(message: "#{@mosque.name} registed on recently")
       render json: {data: mosque,message:'mosque created successfully'}, status: :created
     else
       render json: {message:'not created'}, status: :false

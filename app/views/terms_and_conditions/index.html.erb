@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-md-around" style="padding-top: 10px;">
+    <div class="col">
+      <h1>Terms and conditions</h1>
+      <% if @terms_and_conditions.any? %>
+        <ul>
+          <% @terms_and_conditions.each do |data| %>
+            <h3> <%= data.title %> </h3>
+            <p><%= raw(data.description) %></p>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>Terms and conditions not found.</p>
+      <% end %>
+    </div>
+  </div>
+</div>

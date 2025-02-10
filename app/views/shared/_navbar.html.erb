@@ -1,6 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <%= link_to "MyM", homes_path, class: "text-decoration-none text-primary fw-bold fs-4 text-center navbar-brand" %>
+    <%#= link_to "MyM", homes_path, class: "text-decoration-none text-primary fw-bold fs-4 text-center navbar-brand" %>
+    <%= link_to root_path do %>
+      <%= image_tag 'mymosque.png', alt: 'Home', style: 'width: 50px; height: auto;' %>
+    <% end %>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,6 +16,9 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <%= link_to "home", homes_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "admin", admin_dashboard_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

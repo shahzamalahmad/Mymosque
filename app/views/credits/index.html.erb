@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-md-around" style="padding-top: 10px;">
+    <div class="col">
+      <h1>Credits</h1>
+      <% if @credits.any? %>
+        <ul>
+          <% @credits.each do |data| %>
+            <h3> <%= data.title %> </h3>
+            <p><%= raw(data.description) %></p>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No credits found.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
