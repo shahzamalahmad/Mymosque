@@ -1,6 +1,6 @@
 class Role < ApplicationRecord
   self.table_name = :roles
 
-  belongs_to :user
+  has_many :accounts
 end
 

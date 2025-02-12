@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row justify-content-md-around" style="padding-top: 10px;">
+    <div class="col col-lg-3 custom-class ">
+      <div class="container">
+        <h1 class="row justify-content-md-center custom-content-heading-class">
+          Sign up
+        </h1>
+        <div class="row justify-content-md-around" style="padding-bottom: 15px;">
+          <div class="col col-lg-3">
+            <div style="width: 300px;">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
+
+                <div class="field">
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %><br><br>
+                </div>
+
+                <div class="field">
+                  <%= f.select :role_id, Role.all.collect { |r| [r.name, r.id] }, { prompt: "Select Role" } %><br><br>
+                </div>
+
+                <div class="field">
+                  <div style="position: relative; display: flex; align-items: center; padding-left: 40px;">
+                    <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password", id: "password-field", style: "padding-right: 60px;" %>
+                    <span id="toggle-password" onclick="togglePassword()" style="position: absolute; right: 10px; cursor: pointer; color: blue;">
+                      Show
+                    </span>
+                  </div>
+                  <script>
+                    function togglePassword() {
+                      var passwordField = document.getElementById("password-field");
+                      var toggleText = document.getElementById("toggle-password");
+                      
+                      if (passwordField.type === "password") {
+                        passwordField.type = "text";
+                        toggleText.textContent = "Hide";
+                      } else {
+                        passwordField.type = "password";
+                        toggleText.textContent = "Show";
+                      }
+                    }
+                  </script>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br><br>
+                </div>
+                <div class="field">
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm-new-password" %><br>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "Sign up" %>
+                </div>
+              <% end %>
+
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

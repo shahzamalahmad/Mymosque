@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :accounts, controllers: {
+    registrations: 'accounts/registrations'
+  }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get '/search', to: 'search#search', as: 'search'
@@ -7,5 +10,6 @@ Rails.application.routes.draw do
   resources :about_us, only: [:index, :show]
   resources :terms_and_conditions, only: [:index, :show]
   resources :privacy_policies, only: [:index, :show]
+  # resources :accounts
   root "homes#index"
 end
