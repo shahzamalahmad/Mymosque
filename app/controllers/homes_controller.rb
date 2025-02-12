@@ -14,6 +14,7 @@ class HomesController < ApplicationController
                end
     @mosque_index = Home.where(category: "mosque")
     @madarsa_index = Home.where(category: "madarsa")
+    @school_index = Home.where(category: "school")
     # if @mosques.present?
     #   render json: { data: @mosques }, status: :ok
     # else
