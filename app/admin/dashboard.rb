@@ -39,9 +39,9 @@ ActiveAdmin.register_page "Dashboard" do
         div class: "blank_slate_container" do
           columns do
             column do
-              panel "Total Mosques" do
+              panel "Total Schools" do
                 ul do
-                  Home.where(category: "mosque").count
+                  Home.where(category: "school").count
                 end
               end
             end
@@ -53,9 +53,10 @@ ActiveAdmin.register_page "Dashboard" do
         div class: "blank_slate_container" do
           columns do
             column do
-              panel "Total Madarsa" do
+              panel "Other institutes" do
                 ul do
-                  Home.where(category: "madarsa").count
+                  # Home.where(category: "madarsa").count
+                  "NA"
                 end
               end
             end
