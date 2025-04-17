@@ -49,7 +49,8 @@
                 </div>
 
                 <div class="actions">
-                  <%= f.submit "Sign up" %>
+                  <%= f.submit "Sign up" %><br><br>
+                  <%= link_to "Continue as Guest", new_session_path(resource_name) %>
                 </div>
               <% end %>
 
