@@ -1,0 +1,14 @@
+<h1>Account Details</h1>
+
+<p>
+  <strong>Email:</strong> <%= @account.email %>
+</p>
+<p>
+  <strong>Role:</strong> <%= @account.role.name if @account.role %>
+</p>
+<p>
+  <strong>Approved:</strong> <%= @account.approved? ? "Yes" : "No" %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back to Accounts', accounts_path %>
