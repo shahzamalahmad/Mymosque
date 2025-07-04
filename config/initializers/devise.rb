@@ -28,7 +28,7 @@ Devise.setup do |config|
 
 
   # Configure the class responsible to send e-mails.
-  config.mailer = Devise::Mailer
+  config.mailer = 'CustomDeviseMailer'
 
 
   # Add this line:
